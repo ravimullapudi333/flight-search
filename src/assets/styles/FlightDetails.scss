@@ -1,0 +1,56 @@
+.flight-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+  .box {
+    height: 70px;
+    width: 100px;
+  }
+
+  .desc {
+    display: flex;
+    flex-direction: column;
+
+    .heading {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .sub-heading {
+      font-weight: lighter;
+      color: #7b7a7a;
+      font-size: 10px;
+    }
+  }
+  .show-detail {
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .travel-time {
+    font-size: 16px;
+    font-weight: 400;
+    color: green;
+  }
+  .currency {
+    color: red;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .book-btn {
+    background: #d63434;
+    font-size: 16px;
+    color: white;
+    height: 41px;
+    width: 90px;
+    border: none;
+    border-radius: 5px;
+    font-size: larger;
+  }
+}
+.border {
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}

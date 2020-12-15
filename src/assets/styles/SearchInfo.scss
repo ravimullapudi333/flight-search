@@ -1,0 +1,21 @@
+.search-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid;
+  padding: 1rem;
+  .search-info-item {
+    display: flex;
+    img {
+      height: 4vh;
+    }
+    .info {
+      padding-left: 0.5rem;
+      .city-info {
+        font-weight: 600;
+      }
+      .date-info {
+        font-weight: 100;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.multi-flight {
+  border: 1px solid black;
+  margin-bottom: 1rem;
+  .bottom-border {
+    border-bottom: 1px solid black;
+  }
+  .multi-detail {
+    background-color: #ececec;
+    position: relative;
+    .dashed-line {
+      border: 1px dashed;
+      width: 100%;
+    }
+    .layover-time {
+      border: 1px dashed;
+      position: absolute;
+      top: 45%;
+      left: 43%;
+      background-color: white;
+      padding: 0.2rem;
+      color: #989696;
+    }
+  }
+}

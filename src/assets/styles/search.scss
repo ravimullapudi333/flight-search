@@ -1,0 +1,41 @@
+.side-content {
+  padding-top: 8rem;
+  padding-left: 0.5rem;
+
+  .tab {
+    overflow: hidden;
+    button {
+      background-color: inherit;
+      float: left;
+      cursor: pointer;
+      padding: 10px 30px;
+      transition: 0.3s;
+    }
+    button.active {
+      background-color: rgb(18, 133, 241);
+    }
+    button:hover {
+      background-color: rgb(63, 145, 221);
+    }
+  }
+  /* Style the tab content */
+  .tab-content {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: flex;
+    flex-direction: column;
+    .element {
+      height: 30px;
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+  .show {
+    display: block;
+  }
+
+  .hide {
+    display: none;
+  }
+}

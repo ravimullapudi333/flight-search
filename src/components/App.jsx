@@ -86,8 +86,10 @@ function App(props) {
                   : [])
               ]}
             ></SearchInfo>
-          ) : null}
-          <div style={{ display: 'flex' }}>
+          ) : (
+            <div className="no-data"> No Flights found </div>
+          )}
+          <div className="flight-list ">
             <div className="details">
               {onwardFlights &&
                 onwardFlights.map((data, index) => {

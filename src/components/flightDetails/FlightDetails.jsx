@@ -37,11 +37,7 @@ function FlightDetails(props) {
       </div>
 
       <span className="currency">{!multi && price}</span>
-      {!multi ? (
-        <button className="book-btn ">Book</button>
-      ) : (
-        <div style={{ width: '120px' }}></div>
-      )}
+      {!multi ? <button className="book-btn ">Book</button> : <div className="no-button"></div>}
     </div>
   );
 }

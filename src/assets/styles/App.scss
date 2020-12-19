@@ -1,28 +1,37 @@
 .main {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   .header {
     font-weight: bold;
     padding: 1%;
     border-bottom: 1px solid black;
-    font-size: x-large;
-    height: 5vh;
+    font-size: 20px;
   }
   .content {
     flex-grow: 1;
     display: flex;
+    overflow-y: hidden;
+    height: 0px;
 
     .side {
       width: 18%;
       border: 1px solid black;
+      overflow-y: auto;
     }
     .main-content {
       width: 82%;
       border: 1px solid black;
-      .details {
-        padding: 1rem;
-        flex-grow: 1;
+      overflow-y: auto;
+      .no-data {
+        padding: 1%;
+      }
+      .flight-list {
+        display: flex;
+        .details {
+          padding: 1rem;
+          flex-grow: 1;
+        }
       }
     }
   }

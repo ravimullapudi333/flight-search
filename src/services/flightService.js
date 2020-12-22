@@ -4,7 +4,7 @@ export const fetchFlightsData = async () => {
   const response = await fetch('https://tw-frontenders.firebaseio.com/advFlightSearch.json');
   return await response.json();
 };
-const getMultipleFlights = ({ data, originCity, destinationCity, passengers }) => {
+export const getMultipleFlights = ({ data, originCity, destinationCity, passengers }) => {
   const nonDirectFlights =
     data &&
     data.filter(flight => {
@@ -61,7 +61,7 @@ export const getFilteredFlights = ({
     data.filter(flight => {
       return isDateEqual(flight.date, travelDate);
     });
-  const directFlights =
+  let directFlights =
     selectedDateFlights &&
     selectedDateFlights
       .filter(flight => {
@@ -72,11 +72,12 @@ export const getFilteredFlights = ({
         f.price = f.price * passengers;
         return f;
       });
-  const multipleFlights = getMultipleFlights({
+  let multipleFlights = getMultipleFlights({
     data: selectedDateFlights,
     originCity,
     destinationCity,
     passengers
   });
+  directFlights = directFlights ? directFlights : [];
   return [...directFlights, ...multipleFlights];
 };

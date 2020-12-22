@@ -23,7 +23,7 @@ function MultipleFlightDetails(props) {
 
         <div className="desc">
           <span className="heading">{name}</span>
-          <div onClick={() => setShowDetail(!showDetail)} className="show-detail ">
+          <div onClick={() => setShowDetail(!showDetail)} className="show-detail">
             {!showDetail ? 'Show details' : 'Hide details'}
           </div>
         </div>

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 
 function Search(props) {
-  const [selectedTab, setSelectedTab] = useState('oneWay');
-  const [originCity, setOriginCity] = useState('');
-  const [destinationCity, setDestinationCity] = useState('');
-  const [departureDate, setDepartureDate] = useState('');
-  const [returnDate, setReturnDate] = useState('');
-  const [passengers, setPassengers] = useState(0);
-  const [data, setData] = useState(null);
+  const [selectedTab, setSelectedTab] = React.useState('oneWay');
+  const [originCity, setOriginCity] = React.useState('');
+  const [destinationCity, setDestinationCity] = React.useState('');
+  const [departureDate, setDepartureDate] = React.useState('');
+  const [returnDate, setReturnDate] = React.useState('');
+  const [passengers, setPassengers] = React.useState(0);
   const tabs = [
     {
       key: 'oneWay',
@@ -47,6 +46,7 @@ function Search(props) {
         {tabs.map(tab => {
           return (
             <button
+              id={tab.key}
               key={tab.key}
               className={`${selectedTab === tab.key ? 'active' : ''}`}
               onClick={() => onTabClick(tab.key)}
@@ -58,6 +58,7 @@ function Search(props) {
       </div>
       <div className={`tab-content`}>
         <input
+          id="search-origin"
           className="element"
           list="originCity"
           name="originCity"
@@ -71,6 +72,7 @@ function Search(props) {
           ))}
         </datalist>
         <input
+          id="search-destination"
           className="element"
           list="destinationCity"
           name="destinationCity"
@@ -124,7 +126,7 @@ function Search(props) {
           <option value={3}>3</option>
           <option value={4}>4</option>
         </select>
-        <button className="element" onClick={onSubmit}>
+        <button id="search-submit" className="element" onClick={onSubmit}>
           Search
         </button>
       </div>

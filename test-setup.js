@@ -8,3 +8,4 @@ const enzyme = require('enzyme');
 const Adapter = require('enzyme-adapter-react-16');
 
 enzyme.configure({ adapter: new Adapter() });
+//console.log = console.info = console.warn = console.debug = console.error = (..._) => {};

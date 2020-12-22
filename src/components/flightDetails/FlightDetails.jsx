@@ -31,7 +31,7 @@ function FlightDetails(props) {
         <span className="sub-heading">{destination}</span>
       </div>
 
-      <div className="desc">
+      <div className="time-details desc">
         <span className="heading">{travelTime}</span>
         <span className="sub-heading">{!multi ? 'Non Stop' : '    '}</span>
       </div>

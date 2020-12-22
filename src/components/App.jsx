@@ -10,10 +10,10 @@ import { fetchFlightsData, getFilteredFlights } from '../services/flightService'
 import flightImage from '../assets/images/flightImage.jpeg';
 
 function App(props) {
-  const [searchData, setSearchData] = useState({});
-  const [flightsData, setFlightsData] = useState([]);
-  const [onwardFlights, setOnwardFlights] = useState(null);
-  const [returnFlights, setReturnFlights] = useState(null);
+  const [searchData, setSearchData] = React.useState({});
+  const [flightsData, setFlightsData] = React.useState([]);
+  const [onwardFlights, setOnwardFlights] = React.useState(null);
+  const [returnFlights, setReturnFlights] = React.useState(null);
 
   React.useEffect(() => {
     getOnwardFlights();
